@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Практическое задание</title>
+	<style type="text/css">
+		body {
+			margin:0;
+			font-style: italic;
+		}
+		
+		* {
+		    box-sizing: border-box;
+		}
+
+		.mySlides {display: none}
+		img {vertical-align: middle;}
+
+		.slideshow-container {
+		  max-width: 1000px;
+		  position: relative;
+		  margin: auto;
+		}
+
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		}
+
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
+
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
+
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
+
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
+
+		.dot {
+		  cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
+
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
+
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
+
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
+
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px}
+		}
+
+		.column {
+		    float: left;
+		    width: 50%;
+		    padding: 10px;
+		}
+
+		.row:after {
+		    display: table;
+		    clear: both;
+		}
+
+		@media screen and (max-width: 600px) {
+		    .column {
+		        width: 100%;
+		    }
+		}
+
+		.navbar {
+		  overflow: hidden;
+		  background-color: #D2B48C;
+		  position: fixed;
+		  bottom: 0;
+		  width: 100%;
+		}
+
+		.navbar a {
+		  float: left;
+		  display: block;
+		  color: #000000;
+		  text-align: center;
+		  padding: 14px 16px;
+		  text-decoration: none;
+		  font-size: 17px;
+		}
+
+		.navbar a:hover {
+		  background: #FFF8DC;
+		  color: black;
+		}
+
+		.navbar a.active {
+		  background-color: #BC8F8F;
+		  color: black;
+		}
+
+		.main {
+		  padding: 16px;
+		  margin-bottom: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div class="navbar">
+	  <a href="index.html">Американские блины</a>
+	  <a href="brauni.html" class="active">Брауни</a>
+	  <a href="sirniki.html">Сырники из творога</a>
+	</div>
+	<div class="row">
+	  <div class="column" style="background-color:#FAEBD7; height: 2800px;">
+	    <h2>Брауни</h2>
+	    <p><strong>ИНГРЕДИЕНТЫ(на 6 порций)</strong></p>
+	    <hr>
+	    <ul>
+	    	<li>Яйцо куриное-4 штуки</li>
+	    	<li>Темный шоколад-100 г</li>
+	    	<li>Сливочное масло-180 г</li>
+	    	<li>Коричневый сахар-200 г</li>
+	    	<li>Пшеничная мука-100г</li>
+	    	<li>Грецкие орехи-100 г</li>
+	    </ul>
+	    <hr>
+	    <div class="slideshow-container">
+
+	    <div class="mySlides fade">
+	      <div class="numbertext">1 / 3</div>
+	      <img src="p_O (8).jpg" style="width:100%">
+	    </div>
+
+	    <div class="mySlides fade">
+	      <div class="numbertext">2 / 3</div>
+	      <img src="p_O (9).jpg" style="width:100%">
+	    </div>
+
+	    <div class="mySlides fade">
+	      <div class="numbertext">3 / 3</div>
+	      <img src="p_O (10).jpg" style="width:100%">
+	    </div>
+
+	    <a class="prev" onclick="plusSlides(-1)">❮</a>
+	    <a class="next" onclick="plusSlides(1)">❯</a>
+
+	    </div>
+	    <br>
+
+	    <div style="text-align:center">
+	      <span class="dot" onclick="currentSlide(1)"></span> 
+	      <span class="dot" onclick="currentSlide(2)"></span> 
+	      <span class="dot" onclick="currentSlide(3)"></span> 
+	    </div>
+	    <p>Социальные сети:</p>
+	    <p><a href="https://m.facebook.com/login/?locale2=ru_RU" target="_blank"><img src="512px-Facebook_F_icon.svg.png" height="50" width="50"></a><a href="https://www.instagram.com/accounts/login/?hl=ru" target="_blank" style="padding: 20px;"><img src="Instagram_icon.png" height="50" width="50"></a>
+	  </div>
+	  <div class="column" style="background-color:#FDF5E6; height: 2800px;">
+	    <h2>ИНСТРУКЦИЯ ПРИГОТОВЛЕНИЯ</h2>
+	    <p>1. Шоколад разломать на кусочки и вместе со сливочным маслом растопить на водяной бане, не переставая все время помешивать лопаткой или деревянной ложкой. Получившийся густой шоколадный соус снять с водяной бани и оставить остывать.<br>
+	    <img src="p_O.jpg"><br>
+	    2. Тем временем смешать яйца со ста граммами коричневого сахара: яйца разбить в отдельную миску и взбить, постепенно добавляя сахар. Взбивать можно при помощи миксера или вручную — как больше нравится, — но не меньше двух с половиной-трех минут.<br>
+	    <img src="p_O (1).jpg"><br>
+	    3. Острым ножом на разделочной доске порубить грецкие орехи. Предварительно их можно поджарить на сухой сковороде до появления аромата, но это необязательная опция.<br>
+	    <img src="p_O (2).jpg"><br>
+	    4. В остывший растопленный со сливочным маслом шоколад аккуратно добавить оставшийся сахар, затем муку и измельченные орехи и все хорошо перемешать венчиком.<br>
+	    <img src="p_O (3).jpg"><br>
+	    5. Затем влить сахарно-яичную смесь и тщательно смешать с шоколадной массой. Цвет у теста должен получиться равномерным, без разводов.<br>
+	    <img src="p_O (4).jpg"><br>
+        6. Разогреть духовку до 200 градусов. Дно небольшой глубокой огнеупорной формы выстелить листом бумаги для выпечки или калькой. Перелить тесто в форму. Поставить в духовку и выпекать двадцать пять — тридцать минут до появления сахарной корочки.<br>
+        <img src="p_O (5).jpg"><br>
+        7. Готовый пирог вытащить из духовки, дать остыть и нарезать на квадратики острым ножом или ножом для пиццы — так кусочки получатся особенно ровными.<br>
+        <img src="p_O (6).jpg"><br>
+        8. Подавать брауни можно просто так, а можно посыпать сверху сахарной пудрой или разложить квадратики по тарелкам и украсить каждую порцию шариком ванильного мороженого.<br>
+        <img src="p_O (7).jpg"></p>
+	  </div>
+	</div>
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+
+</body>
+</html>
